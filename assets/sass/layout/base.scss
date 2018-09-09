@@ -1,0 +1,191 @@
+/**
+ * Base
+ */
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $color-white;
+  font-family: $sans-font-family;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: $weight-regular;
+  color: $color-tertiary-5;
+}
+
+.body-wrapper {
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 16px;
+  max-width: calc(#{$max-grid-width} - 48px);
+  margin: 0 auto;
+
+  >:last-child {
+    margin-bottom: 0;
+  }
+}
+
+section {
+  clear: both;
+  padding-top: 56px;
+  float: left;
+  width: 100%;
+
+  p.intro {
+    margin-left: 40px;
+  }
+}
+
+.logo {
+  @extend h2;
+  width: 32px;
+  height: 32px;
+  display: block;
+  background: url("../../assets/media/logo.svg") no-repeat;
+  background-size: 100%;
+
+  span {
+    display: none;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+.more {
+  clear: both;
+
+  .button-ghost {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  @extend h2;
+  color: $color-white;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+
+  &:before {
+    display: none;
+  }
+}
+
+.menu {
+  a {
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: $weight-bold;
+
+    &:hover {
+      color: $color-tertiary-5;
+    }
+  }
+}
+
+.social {
+  clear: both;
+  margin-top: 2px;
+
+  li {
+    display: inline-block;
+    margin-left: 24px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    font-family: $font-icon;
+    color: $color-white;
+    text-decoration: none;
+    font-family: "BokBokIcons";
+    line-height: 2.2rem;
+    font-size: 1.6rem;
+    vertical-align: middle;
+
+    &:hover {
+      color: $color-tertiary-5;
+    }
+  }
+
+  span {
+    display: none;
+  }
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+}
+
+/**
+ * Mini Tablet
+ */
+@media only screen and (min-width: $query-mini-tablet) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+/**
+ * Tablet
+ */
+@media only screen and (min-width: $query-tablet) {
+  .more{
+    p {
+      @include grid(8, $grid-gap);
+    }
+  }
+}
+
+/**
+ * Desktop
+ */
+@media only screen and (min-width: $query-desktop) {
+  body {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  section {
+    padding: 120px 0 36px;
+
+    p.intro {
+      @include grid(8, $grid-gap, 0);
+      margin: 0;
+      @include grid-margin(margin-left, 1);
+    }
+  }
+
+  .more {
+    @include grid(10, $grid-gap, 0);
+    margin: 0 auto;
+  }
+}
+
+/**
+ * HD
+ */
+@media only screen and (min-width: $query-hd) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+}
+
+

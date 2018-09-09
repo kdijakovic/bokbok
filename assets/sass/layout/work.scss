@@ -1,0 +1,399 @@
+/**
+ * Work
+ */
+.work {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  float: left;
+  position: relative;
+
+  .type {
+    float: left;
+  }
+
+  .duration {
+    float: right;
+  }
+
+  .desc {
+    margin: 16px 0 24px 0;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin: 16px 0;
+    float: left;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 542px;
+    float: left;
+  }
+}
+
+.work-screen-wrapper {
+  @extend .full-width;
+}
+
+.work-screen {
+  float: left;
+  position: relative;
+}
+
+.shape-back {
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -16px;
+}
+
+.work-right {
+  img {
+    float: right;
+  }
+
+  .work-screen {
+    float: right;
+  }
+
+  .shape-back {
+    left: auto;
+    right: -16px;
+    margin-left: 0;
+    margin-right: -50%;
+  }
+}
+
+/**
+ * Shapes
+ */
+.shape-circle-left {
+  .work-screen {
+    padding: 60px 0 40px;
+    margin: -20px 0 0;
+  }
+
+  img {
+    width: 95%;
+    max-width: 500px;
+  }
+
+  .shape-back {
+    background: url(../../assets/media/background-2.svg) no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
+
+.shape-square {
+  .work-screen {
+    padding: 120px 0;
+    margin: -140px 0;
+  }
+
+  img {
+    margin: 20px -20px 0 0;
+    width: 110%;
+    max-width: 800px;
+  }
+
+  .shape-back {
+    background: url(../../assets/media/background-3.svg) no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    width: 160%;
+    margin-right: -80%;
+  }
+}
+
+.shape-line {
+  .work-screen {
+    padding: 40px 0 120px;
+    margin: -40px 0 -120px;
+  }
+
+  img {
+    width: 105%;
+    margin-left: -25px;
+    max-width: 562px;
+  }
+
+  .shape-back {
+    background: url(../../assets/media/background-4.svg) no-repeat;
+    background-position: top right;
+    background-size: contain;
+    margin-left: -100%;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.shape-circle-right {
+  .work-screen {
+    padding: 60px 0 10px;
+    margin: -20px 0 -10px;
+  }
+
+  img {
+    width: 100%;
+    margin-right: -10px;
+  }
+
+  .shape-back {
+    background: url(../../assets/media/background-2.svg) no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
+
+.work-info {
+  clear: both;
+}
+
+/**
+ * Mini Tablet
+ */
+@media only screen and (min-width: $query-mini-tablet) {
+  .shape-back {
+    left: -24px;
+  }
+
+  .work-right {
+    .shape-back {
+      right: -24px;
+    }
+  }
+}
+
+/**
+ * Tablet
+ */
+@media only screen and (min-width: $query-tablet) {
+  .work {
+    display: flex;
+    align-items: center;
+  }
+
+  .work-screen, .work-info {
+    width: calc(100% / 2 - 20px);
+    //width: 50%;
+  }
+
+  .work-screen {
+    margin-right: 40px;
+  }
+
+  .work-info {
+    //float: right;
+    clear: none;
+    margin-left: 40px;
+    margin-right: 0;
+    //margin-top: 24px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .work-right {
+    flex-direction: row-reverse;
+
+    .work-screen {
+      margin-right: 0;
+    }
+
+    .work-info {
+      margin-right: 40px;
+      margin-left: 0;
+    }
+
+    .shape-back {
+      left: auto;
+      margin-left: auto;
+      margin-right: -50%;
+    }
+  }
+
+  // Circle
+  .shape-circle-left {
+    img {
+      width: 100%;
+      margin-left: -10px;
+    }
+  }
+
+  .shape-square {
+    .shape-back {
+      margin-right: -80%;
+    }
+  }
+}
+
+@media only screen and (min-width: $query-desktop) {
+  .work {
+    h3 {
+      margin: 24px 0;
+    }
+
+    .desc {
+      margin: 24px 0 40px 0;
+    }
+  }
+
+  .work-screen {
+    @include grid(7, $grid-gap, 0);
+  }
+
+  .shape-circle-left {
+    img {
+      max-width: 760px;
+    }
+  }
+}
+
+/**
+ * HD
+ */
+@media only screen and (min-width: $query-hd) {
+  .work {
+    h3 {
+      margin: 32px 0;
+    }
+
+    .desc {
+      margin-top: 32px;
+    }
+  }
+
+  .shape-back {
+    left: -32px;
+  }
+
+  .work-right {
+    .shape-back {
+      right: -32px;
+    }
+
+    .work-info {
+      @include grid-margin(margin-left, 2, $grid-gap);
+    }
+  }
+
+  .work-left {
+    .work-info-wrapper {
+      width: 80%;
+    }
+  }
+
+  .shape-circle-left {
+    img {
+      max-width: none;
+      width: 760px;
+      margin-left: -185px;
+    }
+
+    .work-screen {
+      @include grid(6, $grid-gap, 0);
+    }
+
+    .shape-back {
+      width: 696px;
+      height: 696px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0 auto -90%;
+    }
+  }
+
+  .shape-square {
+    .work-screen {
+      @include grid(6, $grid-gap, 0);
+    }
+
+    .work-info-wrapper {
+      float: right;
+    }
+
+    img {
+      max-width: 800px;
+      width: 200%;
+      margin-right: -280px;
+    }
+
+    .shape-back {
+      width: 240%;
+      height: 150%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      margin-right: -120%;
+      right: -380px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 568px;
+      height: 349px;
+      background: url("../../assets/projects/ux-side.png") no-repeat;
+      background-size: contain;
+      left: -400px;
+    }
+  }
+
+  .shape-line {
+    .work-screen {
+      @include grid(6, $grid-gap, 0);
+    }
+
+    .shape-back {
+      left: 50px;
+    }
+
+    .work-info {
+      margin-left: 0;
+    }
+
+    img {
+      max-width: 800px;
+      width: 200%;
+      margin-left: -250px;
+    }
+  }
+
+  .shape-circle-right {
+    img {
+      max-width: 900px;
+      width: 200%;
+      margin-right: -360px;
+    }
+
+    .shape-back {
+      right: -240px;
+      height: 85%;
+    }
+
+    .work-screen {
+      @include grid(6, $grid-gap, 0);
+      margin: -60px 0 -10px;
+    }
+
+    .work-info-wrapper {
+      width: 90%;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 402px;
+      height: 370px;
+      background: url("../../assets/projects/brand-side.png") no-repeat;
+      background-size: contain;
+      left: -300px;
+    }
+  }
+}

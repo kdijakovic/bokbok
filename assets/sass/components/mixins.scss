@@ -1,0 +1,26 @@
+@mixin prefix($property, $value) {
+  #{'-webkit-' + $property}: $value;
+  #{'-moz-' + $property}: $value;
+  #{'-ms-' + $property}: $value;
+  #{$property}: $value;
+}
+
+@mixin transition($item) {
+  transition: #{$item} .2s ease-in-out;
+}
+
+$grid-columns: 12;
+$grid-gap: 40px;
+
+@mixin grid($span, $gap: $grid-gap, $end-gap: $grid-gap) {
+  // calculate 1 column width * num of spans (columns) + gaps
+  width: calc(((100% - #{$gap * 11}) / 12) * #{$span} + #{($span - 1) * $gap});
+  @if $end-gap > 0 {
+    margin-right: $end-gap;
+  }
+}
+
+@mixin grid-margin($property, $span, $gap: $grid-gap)
+{
+  #{$property}: calc(((100% - #{$gap * 11}) / 12) * #{$span} + #{($span) * $gap});
+}

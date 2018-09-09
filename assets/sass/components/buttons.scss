@@ -1,0 +1,94 @@
+/**
+ * Buttons
+ */
+%button {
+  border: 1px solid $color-tertiary-5;
+  box-sizing: border-box;
+  color: $color-white;
+  display: block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  max-width: 328px;
+  width: 100%;
+  text-align: center;
+  line-height: 48px;
+  text-transform: uppercase;
+  transition: 0.1s background-color linear, 0.1s color linear;
+  text-decoration: none;
+  margin: 24px 0;
+}
+
+.button-main {
+  @extend %button;
+  background-color: $color-tertiary-5;
+  margin: 16px 0;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-tertiary-5;
+  }
+
+  &:active {
+    background-color: $color-white;
+    border-color: $color-tertiary-2;
+    color: $color-tertiary-2;
+  }
+}
+
+.button-ghost {
+  @extend %button;
+  background-color: transparent;
+  color: $color-tertiary-5;
+
+  &:hover {
+    border-color: $color-tertiary-3;
+    color: $color-tertiary-3;
+  }
+
+  &:active {
+    border-color: $color-tertiary-4;
+    color: $color-tertiary-4;
+  }
+}
+
+.button-link {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: $color-tertiary-5;
+  font-weight: $weight-bold;
+  display: block;
+  cursor: pointer;
+  float: left;
+
+  &:hover {
+    color: $color-tertiary-3;
+  }
+
+  &:after {
+    content: " >";
+  }
+}
+
+/**
+ * Desktop
+ */
+@media only screen and (min-width: $query-desktop) {
+  %button {
+    max-width: 278px;
+  }
+
+  .button-link {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+/**
+ * HD
+ */
+@media only screen and (min-width: $query-hd) {
+  .button-link {
+    font-size: 1.6rem;
+  }
+}

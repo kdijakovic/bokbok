@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="40px" viewBox="0 0 90 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="portfolio" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="svg_sprite" transform="translate(-50.000000, 0.000000)">
+            <g id="Group-3" transform="translate(50.000000, 0.000000)">
+                <g id="Group">
+                    <circle id="Oval" fill="#393939" cx="20" cy="20" r="20"></circle>
+                    <polygon id="Line-3" fill="#FFFFFF" fill-rule="nonzero" points="11.4285714 27.8947368 11.4285714 25.8947368 28.5714286 25.8947368 28.5714286 27.8947368"></polygon>
+                    <polygon id="Line-3" fill="#FFFFFF" fill-rule="nonzero" points="11.4285714 21.1578947 11.4285714 19.1578947 28.5714286 19.1578947 28.5714286 21.1578947"></polygon>
+                    <polygon id="Line-3" fill="#FFFFFF" fill-rule="nonzero" points="11.4285714 14.4210526 11.4285714 12.4210526 28.5714286 12.4210526 28.5714286 14.4210526"></polygon>
+                </g>
+                <g id="Group" transform="translate(50.000000, 0.000000)">
+                    <circle id="Oval" stroke="#FFFFFF" stroke-width="2" cx="20" cy="20" r="19"></circle>
+                    <g id="Group-2" transform="translate(12.000000, 11.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M18.6029368,10 C18.4268433,10 11.7352912,10 -1.47171957,10 C-1.73585979,10 -2,9.78947368 -2,9.57894737 L-2,8.42105263 C-2,8.21052632 -1.73585979,8 -1.47171957,8 L18.4708667,8 C18.7350069,8 18.9991471,8.21052632 18.9991471,8.42105263 C18.9902012,9.18407873 18.9902012,9.57004364 18.9991471,9.57894737 C19.012566,9.59230296 18.867077,10 18.6029368,10 Z" id="Path" transform="translate(8.500000, 9.000000) rotate(-45.000000) translate(-8.500000, -9.000000) "></path>
+                        <path d="M18.6029368,10 C18.4268433,10 11.7352912,10 -1.47171957,10 C-1.73585979,10 -2,9.78947368 -2,9.57894737 L-2,8.42105263 C-2,8.21052632 -1.73585979,8 -1.47171957,8 L18.4708667,8 C18.7350069,8 18.9991471,8.21052632 18.9991471,8.42105263 C18.9902012,9.18407873 18.9902012,9.57004364 18.9991471,9.57894737 C19.012566,9.59230296 18.867077,10 18.6029368,10 Z" id="Path" transform="translate(8.500000, 9.000000) rotate(45.000000) translate(-8.500000, -9.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
