@@ -11,7 +11,7 @@
   max-width: 328px;
   width: 100%;
   text-align: center;
-  line-height: 48px;
+  line-height: 4.8rem;
   text-transform: uppercase;
   transition: 0.1s background-color linear, 0.1s color linear;
   text-decoration: none;
@@ -58,7 +58,6 @@
   color: $color-tertiary-5;
   font-weight: $weight-bold;
   display: block;
-  cursor: pointer;
   float: left;
 
   &:hover {
@@ -76,6 +75,8 @@
 @media only screen and (min-width: $query-desktop) {
   %button {
     max-width: 278px;
+    line-height: 5.6rem;
+    font-size: 1.6rem;
   }
 
   .button-link {

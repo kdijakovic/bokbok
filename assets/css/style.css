@@ -85,7 +85,7 @@ table {
   max-width: 328px;
   width: 100%;
   text-align: center;
-  line-height: 48px;
+  line-height: 4.8rem;
   text-transform: uppercase;
   transition: 0.1s background-color linear, 0.1s color linear;
   text-decoration: none;
@@ -126,7 +126,6 @@ table {
   color: #393939;
   font-weight: 700;
   display: block;
-  cursor: pointer;
   float: left;
 }
 .button-link:hover {
@@ -142,6 +141,8 @@ table {
 @media only screen and (min-width: 1024px) {
   .button-main, .button-ghost {
     max-width: 278px;
+    line-height: 5.6rem;
+    font-size: 1.6rem;
   }
 
   .button-link {
@@ -282,6 +283,11 @@ h4 {
 /**
  * Base
  */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   font-size: 10px;
 }
@@ -361,7 +367,7 @@ section p.intro {
 
 .social {
   clear: both;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 .social li {
   display: inline-block;
@@ -378,7 +384,7 @@ section p.intro {
   text-decoration: none;
   font-family: "BokBokIcons";
   line-height: 2.2rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   vertical-align: middle;
 }
 .social a:hover {
@@ -942,8 +948,7 @@ nav .menu a:hover {
 @media only screen and (min-width: 700px) {
   .timeline-container {
     margin-top: 60px;
-    z-index: -1;
-    margin-bottom: -20px;
+    margin-bottom: 0;
   }
   .timeline-container li {
     width: 50%;
@@ -1513,6 +1518,7 @@ blockquote h3 {
   box-sizing: border-box;
   margin-bottom: 24px;
   padding: 16px;
+  float: left;
 }
 
 .article-wrapper {
@@ -1537,6 +1543,9 @@ article .article-intro {
   margin: 16px 0;
 }
 
+.article-list {
+  clear: both;
+}
 .article-list h3 {
   font-size: 1.1rem;
   line-height: 1.6rem;

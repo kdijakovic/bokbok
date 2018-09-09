@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin-bottom: 24px;
   padding: 16px;
+  float: left;
 }
 
 .article-wrapper {
@@ -38,6 +39,8 @@ article {
 }
 
 .article-list {
+  clear: both;
+
   h3 {
     font-size: 1.1rem;
     line-height: 1.6rem;
