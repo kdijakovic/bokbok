@@ -36,6 +36,7 @@ $(function() {
     // Anchors
     $('a[href^="#"]').each(function() {
         $(this).click(function(event) {
+            closeNav(event);
             let target = $(this).attr('href').substring(1);
             let offset = 0;
 
