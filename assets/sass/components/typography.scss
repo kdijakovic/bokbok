@@ -2,123 +2,124 @@
  * Typography
  */
 strong {
-  font-weight: $weight-bold;
+    font-weight: $weight-bold;
 }
 
 h1 {
-  font-size: 5.4rem;
-  font-family: $serif-font-family;
-  line-height: 6.4rem;
+    font-size: 5.4rem;
+    font-family: $serif-font-family;
+    line-height: 6.4rem;
+    font-weight: $weight-bold;
 }
 
 h2 {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  font-family: $serif-font-family;
-  font-weight: $weight-bold;
-  text-transform: lowercase;
-  margin-bottom: 16px;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-family: $serif-font-family;
+    font-weight: $weight-bold;
+    text-transform: lowercase;
+    margin-bottom: 16px;
 
-  &::before {
-    content: "";
-    background: url("../../assets/media/h2.svg") no-repeat;
-    background-size: auto;
-    display: block;
-    border-radius: 3px;
-    width: 24px;
-    height: 6px;
-    float: left;
-    margin: 16px 16px 0 0;
-  }
+    &::before {
+        content: "";
+        background: url("../../assets/media/h2.svg") no-repeat;
+        background-size: auto;
+        display: block;
+        border-radius: 3px;
+        width: 24px;
+        height: 6px;
+        float: left;
+        margin: 16px 16px 0 0;
+    }
 }
 
 h3 {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: $weight-bold;
-  letter-spacing: 0.222rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: $weight-bold;
+    letter-spacing: 0.222rem;
 }
 
 h4 {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-  font-weight: $weight-bold;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    font-weight: $weight-bold;
 }
 
 .text-small {
-  font-size: 1rem;
-  line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
 }
 
 /**
  * Desktop
  */
 @media only screen and (min-width: $query-desktop) {
-  h1 {
-    font-size: 8.1rem;
-    line-height: 9.6rem;
-  }
-
-  h2 {
-    font-size: 3.6rem;
-    line-height: 4.8rem;
-
-    &::before {
-      @include grid(1, $grid-gap);
-      margin-top: 26px;
+    h1 {
+        font-size: 8.1rem;
+        line-height: 9.6rem;
     }
-  }
 
-  h3 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    letter-spacing: 0.333rem;
-  }
+    h2 {
+        font-size: 3.6rem;
+        line-height: 4.8rem;
 
-  h4 {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-  }
+        &::before {
+            @include grid(1, $grid-gap);
+            margin-top: 26px;
+        }
+    }
 
-  .text-small {
-    font-size: 1.1rem;
-  }
+    h3 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        letter-spacing: 0.333rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .text-small {
+        font-size: 1.1rem;
+    }
 }
 
 /**
  * HD
  */
 @media only screen and (min-width: $query-hd) {
-  h1 {
-    font-size: 12.2rem;
-    line-height: 16.8rem;
-  }
-
-  .text-small {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 5.4rem;
-    line-height: 8rem;
-
-    &::before {
-      margin-top: 46px;
+    h1 {
+        font-size: 12.2rem;
+        line-height: 16.8rem;
     }
-  }
 
-  h3 {
-    font-size: 3.6rem;
-    line-height: 4.8rem;
-    letter-spacing: 0.5rem;
-  }
+    .text-small {
+        font-size: 1.2rem;
+    }
 
-  h4 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
+    h2 {
+        font-size: 5.4rem;
+        line-height: 8rem;
 
-  .text-small {
-    font-size: 1.2rem;
-  }
+        &::before {
+            margin-top: 46px;
+        }
+    }
+
+    h3 {
+        font-size: 3.6rem;
+        line-height: 4.8rem;
+        letter-spacing: 0.5rem;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+
+    .text-small {
+        font-size: 1.2rem;
+    }
 }

@@ -2,182 +2,181 @@
  * Footer
  */
 footer {
-  overflow: hidden;
-  padding-top: 56px;
-  clear: both;
-  float: left;
-  width: 100%;
+    overflow: hidden;
+    padding-top: 56px;
+    clear: both;
+    float: left;
+    width: 100%;
 }
 
 .footer-wrapper {
-  @extend .full-width;
-  height: 390px;
-  position: relative;
-  padding-top: 32px;
-  box-sizing: border-box;
+    @extend .full-width;
+    height: 390px;
+    position: relative;
+    padding-top: 32px;
+    box-sizing: border-box;
 
-  &:before {
-    content: "";
-    background: url(../../assets/media/background-1.svg) no-repeat;
-    background-size: auto 100%;
-    display: block;
-    width: 664px;
-    height: 490px;
-    position: absolute;
-    transform: rotate(180deg);
-    top: 0;
-    left: 50%;
-    margin-left: -418px;
-    z-index: -1;
-  }
-
-  &:after {
-    content: "";
-    display: none;
-    position: absolute;
-    background: url(../../assets/media/conco-footer.jpg) no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    height: 50%;
-    width:30vw;
-    max-width: 420px;
-    z-index: -2;
-    left: -40px;
-    bottom: 100px;
-  }
-
-  .logo {
-    margin: 0 auto 24px;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .title-goodbye {
-    @extend .text-small;
-    font-weight: $weight-bold;
-    color: $color-white;
-  }
-
-  .button-main {
-    margin: 24px auto;
-    border: none;
-    line-height: 5rem;
-  }
-
-  .social {
-    margin: 24px auto 40px !important;
-    text-align: center
-  }
-
-
-  .menu {
-    text-align: center;
-    width: 260px;
-    margin: 0 auto;
-
-    li {
-      display: inline-block;
-      margin: 8px;
+    &:before {
+        content: "";
+        background: url(../../assets/media/background-1.svg) no-repeat;
+        background-size: auto 100%;
+        display: block;
+        width: 664px;
+        height: 490px;
+        position: absolute;
+        transform: rotate(180deg);
+        top: 0;
+        left: 50%;
+        margin-left: -418px;
+        z-index: -1;
     }
-  }
+
+    &:after {
+        content: "";
+        display: none;
+        position: absolute;
+        background: url(../../assets/media/conco-footer.jpg) no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        height: 50%;
+        width: 30vw;
+        max-width: 420px;
+        z-index: -2;
+        left: -40px;
+        bottom: 100px;
+    }
+
+    .logo {
+        margin: 0 auto 24px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .title-goodbye {
+        @extend .text-small;
+        font-weight: $weight-bold;
+        color: $color-white;
+    }
+
+    .button-main {
+        margin: 24px auto;
+        border: none;
+        line-height: 5rem;
+    }
+
+    .social {
+        margin: 24px auto 40px !important;
+        text-align: center
+    }
+
+    .menu {
+        text-align: center;
+        width: 260px;
+        margin: 0 auto;
+
+        li {
+            display: inline-block;
+            margin: 8px;
+        }
+    }
 }
 
 /**
  * Mini Tablet
  */
 @media only screen and (min-width: $query-mini-tablet) {
-  .footer-wrapper {
-    height: 370px;
+    .footer-wrapper {
+        height: 370px;
 
-    .menu {
-      width: auto;
+        .menu {
+            width: auto;
+        }
     }
-  }
 }
 
 /**
  * Desktop
  */
 @media only screen and (min-width: $query-desktop) {
-  footer {
-    padding-top: 100px;
-  }
-
-  .footer-wrapper {
-    height: 540px;
-    margin: 0 auto;
-    padding-top: 116px;
-    @include grid(10, $grid-gap, 0);
-    left: 0;
-
-    &:before {
-      width: 922px;
-      height: 707px;
-      top: 0;
-      right: -190px;
-      left: auto;
-      margin-left: 0;
+    footer {
+        padding-top: 100px;
     }
 
-    &:after {
-      display: block;
-    }
+    .footer-wrapper {
+        height: 540px;
+        margin: 0 auto;
+        padding-top: 116px;
+        @include grid(10, $grid-gap, 0);
+        left: 0;
 
-    & > * {
-      float: right;
-      clear: right;
-    }
+        &:before {
+            width: 922px;
+            height: 707px;
+            top: 0;
+            right: -190px;
+            left: auto;
+            margin-left: 0;
+        }
 
-    .logo {
-      margin-bottom: 40px;
-    }
+        &:after {
+            display: block;
+        }
 
-    .button-main {
-      margin: 32px 0;
-    }
+        & > * {
+            float: right;
+            clear: right;
+        }
 
-    .social {
-      margin-top: 32px !important;
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .button-main {
+            margin: 32px 0;
+        }
+
+        .social {
+            margin-top: 32px !important;
+        }
     }
-  }
 }
 
 /**
  * HD
  */
 @media only screen and (min-width: $query-hd) {
-  footer {
-    margin-top: 78px;
-  }
-
-  .footer-wrapper {
-    height: 630px;
-    padding-top: 126px;
-    width: 100%;
-
-    &:before {
-      width: 1078px;
-      height: 826px;
-      top: 0;
-      right: -230px;
-      left: auto;
-      margin-left: 0;
+    footer {
+        margin-top: 78px;
     }
 
-    &:after {
-      left: 120px;
-    }
+    .footer-wrapper {
+        height: 630px;
+        padding-top: 126px;
+        width: 100%;
 
-    .logo {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 48px;
-    }
+        &:before {
+            width: 1078px;
+            height: 826px;
+            top: 0;
+            right: -230px;
+            left: auto;
+            margin-left: 0;
+        }
 
-    .button-main {
-      margin-bottom: 48px;
+        &:after {
+            left: 120px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 48px;
+        }
+
+        .button-main {
+            margin-bottom: 48px;
+        }
     }
-  }
 }

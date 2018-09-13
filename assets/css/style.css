@@ -2,7 +2,7 @@
 /**
  * Reset
  */
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:700,900&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:700");
 html, body, div, span, applet, object, iframe,
 h1, h2, article h3, .title, .logo, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -82,10 +82,11 @@ table {
   display: block;
   cursor: pointer;
   font-size: 1.2rem;
+  line-height: 4.8rem;
+  font-weight: 700;
   max-width: 328px;
   width: 100%;
   text-align: center;
-  line-height: 4.8rem;
   text-transform: uppercase;
   transition: 0.1s background-color linear, 0.1s color linear;
   text-decoration: none;
@@ -169,6 +170,7 @@ h1 {
   font-size: 5.4rem;
   font-family: "Playfair Display", serif;
   line-height: 6.4rem;
+  font-weight: 700;
 }
 
 h2, article h3, .title, .logo {
@@ -923,6 +925,7 @@ nav .menu a:hover {
   text-transform: uppercase;
   color: #FFF;
   line-height: 24px;
+  font-weight: 700;
   display: inline-block;
   padding: 0 8px;
   border-radius: 12px;

@@ -2,163 +2,162 @@
  * Articles
  */
 .featured-article {
-  background-color: #FBFBFB;
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  padding: 16px;
-  float: left;
+    background-color: #FBFBFB;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    padding: 16px;
+    float: left;
 }
 
 .article-wrapper {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 article {
-  h3 {
-    @extend h2;
-    text-transform: none;
-    letter-spacing: normal;
+    h3 {
+        @extend h2;
+        text-transform: none;
+        letter-spacing: normal;
 
-    &:before {
-      display: none;
+        &:before {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                color: $color-tertiary-3;
+            }
+        }
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-
-      &:hover {
-        color: $color-tertiary-3;
-      }
+    .article-intro {
+        margin: 16px 0;
     }
-  }
-
-  .article-intro {
-    margin: 16px 0;
-  }
 }
 
 .article-list {
-  clear: both;
+    clear: both;
 
-  h3 {
-    font-size: 1.1rem;
-    line-height: 1.6rem;
-    font-family: $sans-font-family;
+    h3 {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        font-family: $sans-font-family;
 
-    a {
-      text-decoration: none;
-      color: inherit;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
-  }
 
-  .article-intro {
-    @extend .text-small;
-  }
+    .article-intro {
+        @extend .text-small;
+    }
 
-  li:not(:first-child):before {
-    content: "";
-    display: block;
-    background-color: red;
-    margin: 24px 0;
-    height: 1px;
-    width: 50%;
-  }
+    li:not(:first-child):before {
+        content: "";
+        display: block;
+        background-color: red;
+        margin: 24px 0;
+        height: 1px;
+        width: 50%;
+    }
 }
 
 /**
  * Mini Tablet
  */
 @media only screen and (min-width: $query-mini-tablet) {
-  .featured-article {
-    padding: 24px;
-  }
+    .featured-article {
+        padding: 24px;
+    }
 }
-
 
 /**
  * Tablet
  */
 @media only screen and (min-width: $query-tablet) {
-  .article-list {
-    li:not(:first-child):before {
-      width: 25%;
+    .article-list {
+        li:not(:first-child):before {
+            width: 25%;
+        }
     }
-  }
 }
 
 /**
  * Desktop
  */
 @media only screen and (min-width: $query-desktop) {
-  .featured-article {
-    @include grid(5, $grid-gap);
-    @include grid-margin(margin-left, 1);
-    left: 0;
-    float: left;
-  }
-
-  .article-wrapper {
-    display: flex;
-    align-items: center;
-    margin: 50px 0;
-  }
-
-  .article-list {
-    float: left;
-    @include grid(5, $grid-gap);
-  }
-
-  .article-list {
-    h3 {
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-      margin-bottom: 0;
+    .featured-article {
+        @include grid(5, $grid-gap);
+        @include grid-margin(margin-left, 1);
+        left: 0;
+        float: left;
     }
 
-    .article-intro {
-      margin: 8px 0 24px;
+    .article-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 50px 0;
     }
 
-    li:not(:first-child):before {
-      margin: 24px 0 32px;
+    .article-list {
+        float: left;
+        @include grid(5, $grid-gap);
     }
-  }
+
+    .article-list {
+        h3 {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            margin-bottom: 0;
+        }
+
+        .article-intro {
+            margin: 8px 0 24px;
+        }
+
+        li:not(:first-child):before {
+            margin: 24px 0 32px;
+        }
+    }
 }
 
 /**
  * HD
  */
 @media only screen and (min-width: $query-hd) {
-  .featured-article {
-    margin: 0;
-    padding: 48px;
-    @include grid(6, $grid-gap);
-  }
-
-  .article-wrapper {
-    margin: 102px 0;
-  }
-
-  .article-list {
-    @include grid(6, $grid-gap, 0);
-    margin-right: 0;
-
-    h3 {
-      font-size: 2.4rem;
-      line-height: 3.2rem;
+    .featured-article {
+        margin: 0;
+        padding: 48px;
+        @include grid(6, $grid-gap);
     }
 
-    .article-intro {
-      margin: 16px 0 32px;
+    .article-wrapper {
+        margin: 102px 0;
     }
 
-    li {
-      width: 85%;
-    }
+    .article-list {
+        @include grid(6, $grid-gap, 0);
+        margin-right: 0;
 
-    li:not(:first-child):before {
-      margin: 32px 0 40px;
+        h3 {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+        }
+
+        .article-intro {
+            margin: 16px 0 32px;
+        }
+
+        li {
+            width: 85%;
+        }
+
+        li:not(:first-child):before {
+            margin: 32px 0 40px;
+        }
     }
-  }
 }

@@ -2,502 +2,502 @@
  * Header
  */
 header {
-  .top {
-    @extend .container;
-    position: absolute;
-    padding: 0 24px;
-    top: 0;
-  }
-
-  .header-container {
-    position: relative;
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: -1;
-      top: -82px;
-      left: -120px;
-      width: 457px;
-      height: 100%;
-      background: url(../../assets/media/background-1.svg) no-repeat;
-      background-position: top right;
-      background-size: 100% auto;
-      @include transition(background);
+    .top {
+        @extend .container;
+        position: absolute;
+        padding: 0 24px;
+        top: 0;
     }
-  }
 
-  .header-wrapper {
-    padding-top: 96px;
-  }
+    .header-container {
+        position: relative;
 
-  .header-top-wrapper{
-    position: relative;
-    margin-left: 8px;
-    height: 172px;
-
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      /* top: 124px; */
-      bottom: 10px;
-      right: -16px;
-      background: url(../../assets/media/conco-mobile.jpg) no-repeat;
-      background-position: bottom right;
-      background-size: contain;
-      width: 53%;
-      height: 150%;
-      max-height: 209px;
-      z-index: -2;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: -82px;
+            left: -120px;
+            width: 457px;
+            height: 100%;
+            background: url(../../assets/media/background-1.svg) no-repeat;
+            background-position: top right;
+            background-size: 100% auto;
+            @include transition(background);
+        }
     }
-  }
 
-  .title-desc {
-    margin-top: 24px;
-  }
-
-  .logo {
-    padding: 32px 0;
-    margin: 0;
-    background-origin: content-box;
-  }
-
-  h1 {
-    color: $color-white;
-    text-transform: lowercase;
-
-    span:before{
-      content: '\A';
-      white-space: pre;
+    .header-wrapper {
+        padding-top: 96px;
     }
-  }
 
-  .explanation {
-    font-weight: $weight-bold;
-    padding-top: 24px;
-  }
+    .header-top-wrapper {
+        position: relative;
+        margin-left: 8px;
+        height: 172px;
 
-  .button-main {
-    margin-bottom: 0;
-  }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            /* top: 124px; */
+            bottom: 10px;
+            right: -16px;
+            background: url(../../assets/media/conco-mobile.jpg) no-repeat;
+            background-position: bottom right;
+            background-size: contain;
+            width: 53%;
+            height: 150%;
+            max-height: 209px;
+            z-index: -2;
+        }
+    }
+
+    .title-desc {
+        margin-top: 24px;
+    }
+
+    .logo {
+        padding: 32px 0;
+        margin: 0;
+        background-origin: content-box;
+    }
+
+    h1 {
+        color: $color-white;
+        text-transform: lowercase;
+
+        span:before {
+            content: '\A';
+            white-space: pre;
+        }
+    }
+
+    .explanation {
+        font-weight: $weight-bold;
+        padding-top: 24px;
+    }
+
+    .button-main {
+        margin-bottom: 0;
+    }
 }
 
 /**
  * Navigation
  */
 #menu-open, #menu-close {
-  background: url("../../assets/media/menu.svg") no-repeat;
-  @include prefix('user-select', none);
-  background-size: auto;
-  display: block;
-  width: 40px;
-  height: 40px;
+    background: url("../../assets/media/menu.svg") no-repeat;
+    @include prefix('user-select', none);
+    background-size: auto;
+    display: block;
+    width: 40px;
+    height: 40px;
 
-  &::selection {
-    background: none;
-  }
+    &::selection {
+        background: none;
+    }
 }
 
 #menu-open {
-  position: fixed;
-  right: 24px;
-  top: 24px;
-  z-index: 1;
+    position: fixed;
+    right: 24px;
+    top: 24px;
+    z-index: 1;
 
-  span {
-    display: none;
-  }
+    span {
+        display: none;
+    }
 }
 
 #menu-close {
-  background-position: 100% 0;
-  float: right;
+    background-position: 100% 0;
+    float: right;
 
-  span {
-    display: none;
-  }
+    span {
+        display: none;
+    }
 }
 
 nav {
-  background-color: $color-tertiary-5;
-  position: fixed;
-  z-index: 100;
-  width: 0;
-  height: 100vh;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-  @include transition(all);
+    background-color: $color-tertiary-5;
+    position: fixed;
+    z-index: 100;
+    width: 0;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    @include transition(all);
 
-  &.fixed {
+    &.fixed {
+        .nav-inner {
+            padding: 24px;
+            @include transition(all);
+        }
+
+        .social {
+            a {
+                color: $color-white;
+
+                &:hover {
+                    color: $color-tertiary-2;
+                }
+            }
+        }
+
+        .menu {
+            a:hover {
+                color: $color-tertiary-2;
+            }
+        }
+    }
+
+    .logo {
+        background: none;
+        width: auto;
+        text-decoration: none;
+        float: left;
+        padding: 0;
+
+        span {
+            display: block;
+            color: #FFF;
+            text-transform: none;
+            letter-spacing: normal;
+            margin-bottom: 8px;
+        }
+    }
+
     .nav-inner {
-      padding: 24px;
-      @include transition(all);
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    &.active {
+        width: 100vw;
+    }
+
+    .title {
+        float: left;
     }
 
     .social {
-      a {
-        color: $color-white;
+        float: right;
+        clear: both;
 
-        &:hover {
-          color: $color-tertiary-2;
+        a:hover {
+            color: $color-tertiary-3;
         }
-      }
     }
 
     .menu {
-      a:hover {
-        color: $color-tertiary-2;
-      }
+        width: 100%;
+        float: right;
+        border-bottom: 1px solid white;
+        margin: 40px 0 24px;
+
+        li {
+            float: right;
+            clear: right;
+            margin-bottom: 24px;
+        }
+
+        a:hover {
+            color: $color-tertiary-5;
+        }
     }
-  }
-
-  .logo {
-    background: none;
-    width: auto;
-    text-decoration: none;
-    float: left;
-    padding: 0;
-
-    span {
-      display: block;
-      color: #FFF;
-      text-transform: none;
-      letter-spacing: normal;
-      margin-bottom: 8px;
-    }
-  }
-
-  .nav-inner {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    padding: 24px;
-    box-sizing: border-box;
-  }
-
-  &.active {
-    width: 100vw;
-  }
-
-  .title {
-    float: left;
-  }
-
-  .social {
-    float: right;
-    clear: both;
-
-    a:hover {
-      color: $color-tertiary-3;
-    }
-  }
-
-  .menu {
-    width: 100%;
-    float: right;
-    border-bottom: 1px solid white;
-    margin: 40px 0 24px;
-
-    li {
-      float: right;
-      clear: right;
-      margin-bottom: 24px;
-    }
-
-    a:hover {
-      color: $color-tertiary-5;
-    }
-  }
 }
 
 #nav-overlay {
-  background: white;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 99;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
 
-  @include transition(visibility);
+    @include transition(visibility);
 
-  &.active {
-    visibility: visible;
-    opacity: 0.85;
-  }
+    &.active {
+        visibility: visible;
+        opacity: 0.85;
+    }
 }
 
 /**
  * Mini Tablet
  */
 @media only screen and (min-width: $query-mini-tablet) {
-  header {
-    .top {
-      padding: 0 32px;
-    }
+    header {
+        .top {
+            padding: 0 32px;
+        }
 
-    .header-container {
-      &:before {
-        width: 489px;
-        height: 376px;
-        top: -92px;
-      }
-    }
+        .header-container {
+            &:before {
+                width: 489px;
+                height: 376px;
+                top: -92px;
+            }
+        }
 
-    .header-top-wrapper{
-      height: 180px;
+        .header-top-wrapper {
+            height: 180px;
 
-      &:before {
-        right: -24px;
-      }
+            &:before {
+                right: -24px;
+            }
+        }
     }
-  }
 }
 
 /**
  * Tablet
  */
 @media only screen and (min-width: $query-tablet) {
-  header {
-    .header-container {
-      &:before {
-        width: 451px;
-        height: 347px;
-        top: -82px;
-        left: -26px;
-      }
+    header {
+        .header-container {
+            &:before {
+                width: 451px;
+                height: 347px;
+                top: -82px;
+                left: -26px;
+            }
+        }
+
+        .header-top-wrapper {
+            &:before {
+                top: 0;
+                bottom: 0;
+                background: url(../../assets/media/conco-tablet.jpg) no-repeat;
+                background-position: center right;
+                background-size: contain;
+                width: 60%;
+                height: 500%;
+                max-height: 300px;
+                margin: auto;
+            }
+        }
+
+        h1 span:before {
+            display: none;
+        }
     }
 
-    .header-top-wrapper {
-      &:before {
-        top: 0;
-        bottom: 0;
-        background: url(../../assets/media/conco-tablet.jpg) no-repeat;
-        background-position: center right;
-        background-size: contain;
-        width: 60%;
-        height: 500%;
-        max-height: 300px;
-        margin: auto;
-      }
+    #menu-open, #menu-close {
+        top: 48px;
     }
 
-    h1 span:before {
-      display: none;
+    nav {
+        &.active, .nav-inner {
+            width: 360px;
+        }
     }
-  }
-
-  #menu-open, #menu-close {
-    top: 48px;
-  }
-
-  nav {
-    &.active, .nav-inner {
-      width: 360px;
-    }
-  }
 }
 
 /**
  * Desktop
  */
 @media only screen and (min-width: $query-desktop) {
-  header {
-    margin-bottom: 80px;
+    header {
+        margin-bottom: 80px;
 
-    .header-container {
-      min-height: 620px;
+        .header-container {
+            min-height: 620px;
 
-      &:before {
-        width: 1068px;
-        height: 818px;
-        top: -198px;
-        left: -180px;
-      }
+            &:before {
+                width: 1068px;
+                height: 818px;
+                top: -198px;
+                left: -180px;
+            }
+        }
+
+        .header-wrapper {
+            width: calc(100% - 56px);
+            padding-top: 180px;
+            margin: 0 auto;
+        }
+
+        .header-top-wrapper {
+            margin-left: 0;
+            height: auto;
+            position: static;
+
+            &:before {
+                background: url(../../assets/media/conco-hd.jpg) no-repeat;
+                background-position: bottom right;
+                background-size: contain;
+                width: 60%;
+                max-height: 710px;
+                height: 100%;
+                top: auto;
+                bottom: -110px;
+            }
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .title-desc {
+            margin-top: 32px;
+            width: 540px;
+
+            p {
+                color: $color-white;
+            }
+        }
+
+        .button-main {
+            border: none;
+            line-height: 5rem;
+        }
+
+        .explanation {
+            padding-top: 32px;
+        }
     }
 
-    .header-wrapper {
-      width: calc(100% - 56px);
-      padding-top: 180px;
-      margin: 0 auto;
-    }
-
-    .header-top-wrapper {
-      margin-left: 0;
-      height: auto;
-      position: static;
-
-      &:before {
-        background: url(../../assets/media/conco-hd.jpg) no-repeat;
-        background-position: bottom right;
-        background-size: contain;
-        width: 60%;
-        max-height: 710px;
-        height: 100%;
-        top: auto;
-        bottom: -110px;
-      }
-    }
-
-    .logo {
-      display: none;
-    }
-
-    .title-desc {
-      margin-top: 32px;
-      width: 540px;
-
-      p {
-        color: $color-white;
-      }
-    }
-
-    .button-main {
-      border: none;
-      line-height: 5rem;
-    }
-
-    .explanation {
-      padding-top: 32px;
-    }
-  }
-
-  #menu-open, #menu-close {
-    display: none;
-  }
-
-  nav {
-    width: 100%;
-    height: auto;
-    background: none;
-    padding: 0 24px;
-    box-sizing: border-box;
-
-    &.fixed {
-      background-color: rgba($color-tertiary-5, 0.8);
-    }
-
-    .nav-inner {
-      padding: 56px 0;
-      width: calc(100% - 56px);
-      max-width: calc(#{$max-grid-width} - 106px);
-      margin: 0 auto;
-      overflow: hidden;
-      box-sizing: unset;
-    }
-
-    .logo {
-      background: url(../../assets/media/logo.svg) no-repeat;
-      background-size: 100%;
-      display: block;
-      width: 32px;
-      margin: 0;
-
-      span {
+    #menu-open, #menu-close {
         display: none;
-      }
     }
 
-    .title {
-      width: 46px;
-      height: 44px;
-      display: block;
-      background-image: url("../../assets/media/logo.png");
-      margin: 0;
-      float: left;
+    nav {
+        width: 100%;
+        height: auto;
+        background: none;
+        padding: 0 24px;
+        box-sizing: border-box;
 
-      span {
-        display: none;
-      }
+        &.fixed {
+            background-color: rgba($color-tertiary-5, 0.8);
+        }
+
+        .nav-inner {
+            padding: 56px 0;
+            width: calc(100% - 56px);
+            max-width: calc(#{$max-grid-width} - 106px);
+            margin: 0 auto;
+            overflow: hidden;
+            box-sizing: unset;
+        }
+
+        .logo {
+            background: url(../../assets/media/logo.svg) no-repeat;
+            background-size: 100%;
+            display: block;
+            width: 32px;
+            margin: 0;
+
+            span {
+                display: none;
+            }
+        }
+
+        .title {
+            width: 46px;
+            height: 44px;
+            display: block;
+            background-image: url("../../assets/media/logo.png");
+            margin: 0;
+            float: left;
+
+            span {
+                display: none;
+            }
+        }
+
+        .menu {
+            float: left;
+            margin: 4px 0 0;
+            border: none;
+            width: auto;
+
+            li {
+                float: left;
+                margin: 0 0 0 40px;
+            }
+
+            a {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+        }
+
+        .social {
+            clear: none;
+
+            a {
+                color: $color-tertiary-5;
+            }
+        }
     }
-
-    .menu {
-      float: left;
-      margin: 4px 0 0;
-      border: none;
-      width: auto;
-
-      li {
-        float: left;
-        margin: 0 0 0 40px;
-      }
-
-      a {
-        font-size: 1.4rem;
-        line-height: 2.4rem;
-      }
-    }
-
-    .social {
-      clear: none;
-
-      a {
-        color: $color-tertiary-5;
-      }
-    }
-  }
 }
 
 /**
  * HD
  */
 @media only screen and (min-width: $query-hd) {
-  header {
-    .header-container {
-      min-height: 763px;
+    header {
+        .header-container {
+            min-height: 763px;
 
-      &:before {
-        width: 1315px;
-        height: 1007px;
-        top: -244px;
-        left: -110px;
-      }
+            &:before {
+                width: 1315px;
+                height: 1007px;
+                top: -244px;
+                left: -110px;
+            }
+        }
+
+        .header-wrapper {
+            padding-top: 195px;
+        }
+
+        .header-top-wrapper {
+            &:before {
+                left: 600px;
+                right: auto;
+                bottom: -170px;
+                height: 40vw;
+                width: 60vw;
+            }
+        }
+
+        .title-desc {
+            width: 620px;
+        }
     }
 
-    .header-wrapper {
-      padding-top: 195px;
+    nav {
+        padding: 0 32px;
+
+        .nav-inner {
+            //@include grid(12, $grid-gap, 0);
+            width: calc(100% - 56px);
+            padding: 64px 0;
+        }
+
+        .menu {
+            a {
+                font-size: 1.6rem;
+            }
+        }
     }
 
-    .header-top-wrapper {
-      &:before {
-        left: 600px;
-        right: auto;
-        bottom: -170px;
-        height: 40vw;
-        width: 60vw;
-      }
+    .social {
+        a {
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+        }
     }
-
-    .title-desc {
-      width: 620px;
-    }
-  }
-
-  nav {
-    padding: 0 32px;
-
-    .nav-inner {
-      //@include grid(12, $grid-gap, 0);
-      width: calc(100% - 56px);
-      padding: 64px 0;
-    }
-
-    .menu {
-      a {
-        font-size: 1.6rem;
-      }
-    }
-  }
-
-  .social {
-    a {
-      font-size: 2.4rem;
-      line-height: 2.8rem;
-    }
-  }
 }

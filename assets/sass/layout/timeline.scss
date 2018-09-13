@@ -2,252 +2,253 @@
  * Timeline
  */
 .timeline-container {
-  position: relative;
-  margin: 40px 0;
-  float: left;
-  width: 100%;
-
-  ul {
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  li {
     position: relative;
-    padding: 6px 0 0 40px;
-    margin-top: 32px;
-    //overflow: hidden;
+    margin: 40px 0;
+    float: left;
+    width: 100%;
 
-    &:before {
-      content: "";
-      display: block;
-      width: 32px;
-      height: 32px;
-      background: url("../../assets/media/timeline-point.svg") no-repeat;
-      position: absolute;
-      left: 0;
-      top: 0;
+    ul {
+        box-sizing: border-box;
+        width: 100%;
     }
 
-    &:first-child {
-      margin-top: 0;
+    li {
+        position: relative;
+        padding: 6px 0 0 40px;
+        margin-top: 32px;
+        //overflow: hidden;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 32px;
+            height: 32px;
+            background: url("../../assets/media/timeline-point.svg") no-repeat;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child:before {
+            height: 100%;
+            background-color: white;
+        }
     }
 
-    &:last-child:before {
-      height: 100%;
-      background-color: white;
+    .info {
+        margin-top: 16px;
+        overflow: hidden;
     }
-  }
 
-  .info {
-    margin-top: 16px;
-    overflow: hidden;
-  }
-
-  h4 {
-    margin: 8px 0;
-  }
+    h4 {
+        margin: 8px 0;
+    }
 }
 
 .timeline {
-  background-image: linear-gradient($color-primary, $color-secondary);
-  width: 4px;
-  height: 100%;
-  position: absolute;
-  margin: 0 14px;
+    background-image: linear-gradient($color-primary, $color-secondary);
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    margin: 0 14px;
 }
 
 .groups {
-  display: none;
+    display: none;
 }
 
 .tag {
-  text-transform: uppercase;
-  color: $color-white;
-  line-height: 24px;
-  display: inline-block;
-  padding: 0 8px;
-  border-radius: 12px;
-  font-size: 10px;
-  position: absolute;
-  top: 4px;
-  right: 0;
+    text-transform: uppercase;
+    color: $color-white;
+    line-height: 24px;
+    font-weight: $weight-bold;
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    position: absolute;
+    top: 4px;
+    right: 0;
 
-  &.tag-award {
-    background-color: $color-tertiary-5;
-  }
+    &.tag-award {
+        background-color: $color-tertiary-5;
+    }
 
-  &.tag-community {
-    background-color: $color-secondary;
-  }
+    &.tag-community {
+        background-color: $color-secondary;
+    }
 
-  &.tag-certificate {
-    background-color: $color-primary;
-    color: $color-tertiary-5;
-  }
+    &.tag-certificate {
+        background-color: $color-primary;
+        color: $color-tertiary-5;
+    }
 }
 
 /**
  * Tablet
  */
 @media only screen and (min-width: $query-tablet) {
-  .timeline-container {
-    margin-top: 60px;
-    margin-bottom: 0;
+    .timeline-container {
+        margin-top: 60px;
+        margin-bottom: 0;
 
-    li {
-      width: 50%;
-      float: left;
-      margin: 0;
-      padding: 0;
-      clear: both;
+        li {
+            width: 50%;
+            float: left;
+            margin: 0;
+            padding: 0;
+            clear: both;
 
-      &.timeline-space {
-        margin-top: 56px;
-      }
+            &.timeline-space {
+                margin-top: 56px;
+            }
 
-      .time {
-        float: right;
-        width: 80px;
-        margin-right: 24px;
-        margin-top: 6px;
-        text-align: right;
-      }
+            .time {
+                float: right;
+                width: 80px;
+                margin-right: 24px;
+                margin-top: 6px;
+                text-align: right;
+            }
 
-      .info {
-        float: left;
-        margin: 0;
-        width: calc(100% - 118px);
-        text-align: right;
-        position: relative;
-        top: -19px
-      }
+            .info {
+                float: left;
+                margin: 0;
+                width: calc(100% - 118px);
+                text-align: right;
+                position: relative;
+                top: -19px
+            }
+        }
+
+        .left {
+            &:before {
+                left: auto;
+                right: -16px;
+            }
+        }
+
+        .right {
+            float: right;
+
+            &:before {
+                left: -16px;
+            }
+
+            .time {
+                margin-right: 0;
+                margin-left: 24px;
+            }
+
+            .info {
+                top: -52px;
+            }
+
+            .time, .info {
+                text-align: left;
+                float: left;
+            }
+
+            .tag {
+                position: static;
+                margin-bottom: 8px;
+            }
+        }
     }
 
-    .left {
-      &:before {
-        left: auto;
-        right: -16px;
-      }
+    .timeline {
+        left: 50%;
+        margin: 0 0 0 -2px;
     }
-
-    .right {
-      float: right;
-
-      &:before {
-        left: -16px;
-      }
-
-      .time {
-        margin-right: 0;
-        margin-left: 24px;
-      }
-
-      .info {
-        top: -52px;
-      }
-
-      .time, .info {
-        text-align: left;
-        float: left;
-      }
-
-      .tag {
-        position: static;
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  .timeline {
-    left: 50%;
-    margin: 0 0 0 -2px;
-  }
 }
 
 /**
  * Desktop
  */
 @media only screen and (min-width: $query-desktop) {
-  .timeline-container {
-    margin: 107px 0 20px;
+    .timeline-container {
+        margin: 107px 0 20px;
 
-    ul {
-      @include grid(10, $grid-gap, 0);
-      margin: 0 auto;
+        ul {
+            @include grid(10, $grid-gap, 0);
+            margin: 0 auto;
+        }
+
+        li {
+            .info {
+                top: -27px;
+            }
+        }
+
+        .right {
+            .info {
+                top: -63px;
+            }
+
+            .tag {
+                margin-bottom: 12px;
+            }
+        }
     }
 
-    li {
-      .info {
-        top: -27px;
-      }
+    .groups {
+        display: block;
     }
 
-    .right {
-      .info {
-        top: -63px;
-      }
-
-      .tag {
-        margin-bottom: 12px;
-      }
+    .work-group, .other-group {
+        width: 400px;
+        position: absolute;
+        top: 200px;
+        left: -188px;
+        @include prefix(transform, rotate(-90deg));
+        text-transform: uppercase;
+        color: $color-tertiary-2;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.35rem;
+        text-align: right;
     }
-  }
 
-  .groups {
-    display: block;
-  }
-
-  .work-group, .other-group {
-    width: 400px;
-    position: absolute;
-    top: 200px;
-    left: -188px;
-    @include prefix(transform, rotate(-90deg));
-    text-transform: uppercase;
-    color: $color-tertiary-2;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.35rem;
-    text-align: right;
-  }
-
-  .other-group {
-    right: -188px;
-    left: auto;
-  }
+    .other-group {
+        right: -188px;
+        left: auto;
+    }
 }
 
 /**
  * HD
  */
 @media only screen and (min-width: $query-hd) {
-  .work-group, .other-group {
-    font-size: 1.6rem;
-  }
-
-  .timeline-container {
-    margin: 120px 0 20px;
-
-    li {
-      .time {
-        width: 100px;
-      }
-
-      .info {
-        width: calc(100% - 132px);
-        top: -40px;
-      }
+    .work-group, .other-group {
+        font-size: 1.6rem;
     }
 
-    .right {
-      .info {
-        top: -77px;
-      }
-    }
+    .timeline-container {
+        margin: 120px 0 20px;
 
-    h4 {
-      margin: 16px 0;
+        li {
+            .time {
+                width: 100px;
+            }
+
+            .info {
+                width: calc(100% - 132px);
+                top: -40px;
+            }
+        }
+
+        .right {
+            .info {
+                top: -77px;
+            }
+        }
+
+        h4 {
+            margin: 16px 0;
+        }
     }
-  }
 }
