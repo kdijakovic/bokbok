@@ -1391,9 +1391,6 @@ nav .menu a:hover {
   .work-right .shape-back {
     right: -32px;
   }
-  .work-right .work-info {
-    margin-left: calc(((100% - 440px) / 12) * 2 + 80px);
-  }
 
   .work-left .work-info-wrapper {
     width: 80%;
@@ -1424,7 +1421,7 @@ nav .menu a:hover {
   .shape-square img {
     max-width: 880px;
     width: 200%;
-    margin-right: -310px;
+    margin-right: -220px;
   }
   .shape-square .shape-back {
     width: 240%;
@@ -1442,7 +1439,7 @@ nav .menu a:hover {
     height: 349px;
     background: url("../../assets/projects/ux-side-hd.png") no-repeat;
     background-size: contain;
-    left: -400px;
+    left: -580px;
   }
 
   .shape-line .work-screen {
@@ -1463,7 +1460,7 @@ nav .menu a:hover {
   .shape-circle-right img {
     max-width: 900px;
     width: 200%;
-    margin-right: -360px;
+    margin-right: -180px;
   }
   .shape-circle-right .shape-back {
     right: -240px;
@@ -1483,7 +1480,7 @@ nav .menu a:hover {
     height: 370px;
     background: url("../../assets/projects/brand-side-hd.png") no-repeat;
     background-size: contain;
-    left: -300px;
+    left: -380px;
   }
 }
 /**

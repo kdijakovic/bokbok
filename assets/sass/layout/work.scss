@@ -322,10 +322,6 @@
         .shape-back {
             right: -32px;
         }
-
-        .work-info {
-            @include grid-margin(margin-left, 2, $grid-gap);
-        }
     }
 
     .work-left {
@@ -366,7 +362,7 @@
         img {
             max-width: 880px;
             width: 200%;
-            margin-right: -310px;
+            margin-right: -220px;
         }
 
         .shape-back {
@@ -386,7 +382,7 @@
             height: 349px;
             background: url("../../assets/projects/ux-side-hd.png") no-repeat;
             background-size: contain;
-            left: -400px;
+            left: -580px;
         }
     }
 
@@ -414,7 +410,7 @@
         img {
             max-width: 900px;
             width: 200%;
-            margin-right: -360px;
+            margin-right: -180px;
         }
 
         .shape-back {
@@ -438,7 +434,7 @@
             height: 370px;
             background: url("../../assets/projects/brand-side-hd.png") no-repeat;
             background-size: contain;
-            left: -300px;
+            left: -380px;
         }
     }
 }
