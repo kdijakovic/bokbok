@@ -88,6 +88,10 @@
     }
 }
 
+.location {
+    margin-bottom: 8px;
+}
+
 /**
  * Tablet
  */
@@ -228,7 +232,7 @@
     }
 
     .timeline-container {
-        margin: 120px 0 20px;
+        margin: 126px 0 20px;
 
         li {
             .time {
@@ -237,18 +241,22 @@
 
             .info {
                 width: calc(100% - 132px);
-                top: -40px;
+                top: -46px;
             }
         }
 
         .right {
             .info {
-                top: -77px;
+                top: -84px;
             }
         }
 
         h4 {
             margin: 16px 0;
         }
+    }
+
+    .location {
+        margin-bottom: 16px;
     }
 }

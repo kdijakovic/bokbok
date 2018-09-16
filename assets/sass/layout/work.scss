@@ -34,6 +34,17 @@
     }
 }
 
+.work-details{
+    p {
+        @extend .text-small;
+        padding-bottom: 4px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
 .work-screen-wrapper {
     @extend .full-width;
 }
@@ -44,9 +55,9 @@
 }
 
 .shape-back {
-    width: 100%;
+    width: 130%;
     height: 100%;
-    margin-left: -50%;
+    margin-left: -65%;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -64,7 +75,7 @@
 
     .shape-back {
         left: auto;
-        right: -16px;
+        right: -80px;
         margin-left: 0;
         margin-right: -50%;
     }
@@ -81,7 +92,7 @@
 
     img {
         width: 95%;
-        max-width: 500px;
+        max-width: 460px;
     }
 
     .shape-back {
@@ -93,22 +104,23 @@
 
 .shape-square {
     .work-screen {
-        padding: 120px 0;
+        padding: 100px 0 140px;
         margin: -140px 0;
     }
 
     img {
         margin: 20px -20px 0 0;
-        width: 110%;
-        max-width: 800px;
+        width: 100%;
+        max-width: 480px;
     }
 
     .shape-back {
         background: url(../../assets/media/background-3.svg) no-repeat;
         background-position: center;
         background-size: auto 100%;
-        width: 160%;
-        margin-right: -80%;
+        width: 150%;
+        margin-right: -75%;
+        right: -16px;
     }
 }
 
@@ -141,7 +153,7 @@
     }
 
     img {
-        width: 100%;
+        width: 110%;
         margin-right: -10px;
     }
 
@@ -182,7 +194,6 @@
 
     .work-screen, .work-info {
         width: calc(100% / 2 - 20px);
-        //width: 50%;
     }
 
     .work-screen {
@@ -190,11 +201,9 @@
     }
 
     .work-info {
-        //float: right;
         clear: none;
         margin-left: 40px;
         margin-right: 0;
-        //margin-top: 24px;
         padding: 0;
         box-sizing: border-box;
     }
@@ -218,21 +227,47 @@
         }
     }
 
-    // Circle
     .shape-circle-left {
         img {
-            width: 100%;
-            margin-left: -10px;
+            width: 120%;
+            margin-left: 0;
+            margin-right: 29px;
+            margin-top: 25px;
+            max-width: 666px;
+            float: right;
         }
     }
 
     .shape-square {
+        img {
+            width: 120%;
+            max-width: 700px;
+        }
+
         .shape-back {
             margin-right: -80%;
         }
     }
+
+    .shape-line {
+        img {
+            width: 140%;
+            max-width: 820px;
+            margin: 25px 20px 0 0;
+            float: right;
+        }
+    }
+
+    .shape-circle-right {
+        img {
+            max-width: 700px;
+        }
+    }
 }
 
+/**
+ * Desktop
+ */
 @media only screen and (min-width: $query-desktop) {
     .work {
         h3 {
@@ -250,7 +285,7 @@
 
     .shape-circle-left {
         img {
-            max-width: 760px;
+            max-width: 666px;
         }
     }
 }
@@ -292,8 +327,8 @@
     .shape-circle-left {
         img {
             max-width: none;
-            width: 760px;
-            margin-left: -185px;
+            width: 880px;
+            margin-right: 125px;
         }
 
         .work-screen {
@@ -319,9 +354,9 @@
         }
 
         img {
-            max-width: 800px;
+            max-width: 880px;
             width: 200%;
-            margin-right: -280px;
+            margin-right: -310px;
         }
 
         .shape-back {
@@ -339,7 +374,7 @@
             position: absolute;
             width: 568px;
             height: 349px;
-            background: url("../../assets/projects/ux-side.png") no-repeat;
+            background: url("../../assets/projects/ux-side-hd.png") no-repeat;
             background-size: contain;
             left: -400px;
         }
@@ -359,9 +394,9 @@
         }
 
         img {
-            max-width: 800px;
+            max-width: 1078px;
             width: 200%;
-            margin-left: -250px;
+            margin-right: 95px;
         }
     }
 
@@ -391,7 +426,7 @@
             position: absolute;
             width: 402px;
             height: 370px;
-            background: url("../../assets/projects/brand-side.png") no-repeat;
+            background: url("../../assets/projects/brand-side-hd.png") no-repeat;
             background-size: contain;
             left: -300px;
         }

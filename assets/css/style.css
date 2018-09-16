@@ -2,7 +2,7 @@
 /**
  * Reset
  */
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:700");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:700,900");
 html, body, div, span, applet, object, iframe,
 h1, h2, article h3, .title, .logo, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -81,10 +81,9 @@ table {
   color: #FFF;
   display: block;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 4.8rem;
   font-weight: 700;
-  max-width: 328px;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -137,6 +136,14 @@ table {
 }
 
 /**
+ * Custom
+ */
+@media only screen and (min-width: 400px) {
+  .button-main, .button-ghost {
+    max-width: 328px;
+  }
+}
+/**
  * Desktop
  */
 @media only screen and (min-width: 1024px) {
@@ -168,14 +175,14 @@ strong {
 
 h1 {
   font-size: 5.4rem;
-  font-family: "Playfair Display", serif;
   line-height: 6.4rem;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
 h2, article h3, .title, .logo {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
+  font-size: 3rem;
+  line-height: 4rem;
   font-family: "Playfair Display", serif;
   font-weight: 700;
   text-transform: lowercase;
@@ -194,20 +201,20 @@ h2::before, article h3::before, .title::before, .logo::before {
 }
 
 h3 {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
   font-weight: 700;
-  letter-spacing: 0.222rem;
+  letter-spacing: 0.278rem;
 }
 
 h4 {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   font-weight: 700;
 }
 
-.text-small, .footer-wrapper .title-goodbye, .article-list .article-intro {
-  font-size: 1rem;
+.text-small, .footer-wrapper .title-goodbye, .work-details p {
+  font-size: 1.1rem;
   line-height: 1.6rem;
 }
 
@@ -241,7 +248,7 @@ h4 {
     line-height: 2.4rem;
   }
 
-  .text-small, .footer-wrapper .title-goodbye, .article-list .article-intro {
+  .text-small, .footer-wrapper .title-goodbye, .work-details p {
     font-size: 1.1rem;
   }
 }
@@ -254,7 +261,7 @@ h4 {
     line-height: 16.8rem;
   }
 
-  .text-small, .footer-wrapper .title-goodbye, .article-list .article-intro {
+  .text-small, .footer-wrapper .title-goodbye, .work-details p {
     font-size: 1.2rem;
   }
 
@@ -274,10 +281,10 @@ h4 {
 
   h4 {
     font-size: 2.4rem;
-    line-height: 3.2rem;
+    line-height: 4rem;
   }
 
-  .text-small, .footer-wrapper .title-goodbye, .article-list .article-intro {
+  .text-small, .footer-wrapper .title-goodbye, .work-details p {
     font-size: 1.2rem;
   }
 }
@@ -297,8 +304,8 @@ html {
 body {
   background-color: #FFF;
   font-family: "Karla", sans-serif;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
   font-weight: 400;
   color: #393939;
 }
@@ -349,6 +356,7 @@ section p.intro {
 
 .title {
   color: #FFF;
+  font-weight: 900;
   text-transform: none;
   letter-spacing: normal;
   margin-bottom: 8px;
@@ -449,6 +457,7 @@ section p.intro {
 @media only screen and (min-width: 1600px) {
   body {
     font-size: 1.6rem;
+    line-height: 2.8rem;
   }
 
   .container, header .top {
@@ -514,6 +523,7 @@ header .logo {
 header h1 {
   color: #FFF;
   text-transform: lowercase;
+  font-weight: 900;
 }
 header h1 span:before {
   content: "\a";
@@ -537,6 +547,7 @@ header .button-main {
   -ms-user-select: none;
   user-select: none;
   background-size: auto;
+  cursor: pointer;
   display: block;
   width: 40px;
   height: 40px;
@@ -597,6 +608,7 @@ nav .logo {
 nav .logo span {
   display: block;
   color: #FFF;
+  font-weight: 900;
   text-transform: none;
   letter-spacing: normal;
   margin-bottom: 8px;
@@ -834,17 +846,18 @@ nav .menu a:hover {
     width: 1315px;
     height: 1007px;
     top: -244px;
-    left: -110px;
+    left: -180px;
   }
   header .header-wrapper {
     padding-top: 195px;
   }
   header .header-top-wrapper:before {
-    left: 600px;
+    max-width: 1160px;
+    left: 645px;
     right: auto;
     bottom: -170px;
     height: 40vw;
-    width: 60vw;
+    width: 55vw;
   }
   header .title-desc {
     width: 620px;
@@ -943,6 +956,10 @@ nav .menu a:hover {
 .tag.tag-certificate {
   background-color: #FBFF26;
   color: #393939;
+}
+
+.location {
+  margin-bottom: 8px;
 }
 
 /**
@@ -1065,20 +1082,24 @@ nav .menu a:hover {
   }
 
   .timeline-container {
-    margin: 120px 0 20px;
+    margin: 126px 0 20px;
   }
   .timeline-container li .time {
     width: 100px;
   }
   .timeline-container li .info {
     width: calc(100% - 132px);
-    top: -40px;
+    top: -46px;
   }
   .timeline-container .right .info {
-    top: -77px;
+    top: -84px;
   }
   .timeline-container h4 {
     margin: 16px 0;
+  }
+
+  .location {
+    margin-bottom: 16px;
   }
 }
 /**
@@ -1112,15 +1133,22 @@ nav .menu a:hover {
   float: left;
 }
 
+.work-details p {
+  padding-bottom: 4px;
+}
+.work-details p:last-child {
+  padding-bottom: 0;
+}
+
 .work-screen {
   float: left;
   position: relative;
 }
 
 .shape-back {
-  width: 100%;
+  width: 130%;
   height: 100%;
-  margin-left: -50%;
+  margin-left: -65%;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -1135,7 +1163,7 @@ nav .menu a:hover {
 }
 .work-right .shape-back {
   left: auto;
-  right: -16px;
+  right: -80px;
   margin-left: 0;
   margin-right: -50%;
 }
@@ -1149,7 +1177,7 @@ nav .menu a:hover {
 }
 .shape-circle-left img {
   width: 95%;
-  max-width: 500px;
+  max-width: 460px;
 }
 .shape-circle-left .shape-back {
   background: url(../../assets/media/background-2.svg) no-repeat;
@@ -1158,20 +1186,21 @@ nav .menu a:hover {
 }
 
 .shape-square .work-screen {
-  padding: 120px 0;
+  padding: 100px 0 140px;
   margin: -140px 0;
 }
 .shape-square img {
   margin: 20px -20px 0 0;
-  width: 110%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 480px;
 }
 .shape-square .shape-back {
   background: url(../../assets/media/background-3.svg) no-repeat;
   background-position: center;
   background-size: auto 100%;
-  width: 160%;
-  margin-right: -80%;
+  width: 150%;
+  margin-right: -75%;
+  right: -16px;
 }
 
 .shape-line .work-screen {
@@ -1197,7 +1226,7 @@ nav .menu a:hover {
   margin: -20px 0 -10px;
 }
 .shape-circle-right img {
-  width: 100%;
+  width: 110%;
   margin-right: -10px;
 }
 .shape-circle-right .shape-back {
@@ -1264,14 +1293,36 @@ nav .menu a:hover {
   }
 
   .shape-circle-left img {
-    width: 100%;
-    margin-left: -10px;
+    width: 120%;
+    margin-left: 0;
+    margin-right: 29px;
+    margin-top: 25px;
+    max-width: 666px;
+    float: right;
   }
 
+  .shape-square img {
+    width: 120%;
+    max-width: 700px;
+  }
   .shape-square .shape-back {
     margin-right: -80%;
   }
+
+  .shape-line img {
+    width: 140%;
+    max-width: 820px;
+    margin: 25px 20px 0 0;
+    float: right;
+  }
+
+  .shape-circle-right img {
+    max-width: 700px;
+  }
 }
+/**
+ * Desktop
+ */
 @media only screen and (min-width: 1024px) {
   .work h3 {
     margin: 24px 0;
@@ -1285,7 +1336,7 @@ nav .menu a:hover {
   }
 
   .shape-circle-left img {
-    max-width: 760px;
+    max-width: 666px;
   }
 }
 /**
@@ -1316,8 +1367,8 @@ nav .menu a:hover {
 
   .shape-circle-left img {
     max-width: none;
-    width: 760px;
-    margin-left: -185px;
+    width: 880px;
+    margin-right: 125px;
   }
   .shape-circle-left .work-screen {
     width: calc(((100% - 440px) / 12) * 6 + 200px);
@@ -1337,9 +1388,9 @@ nav .menu a:hover {
     float: right;
   }
   .shape-square img {
-    max-width: 800px;
+    max-width: 880px;
     width: 200%;
-    margin-right: -280px;
+    margin-right: -310px;
   }
   .shape-square .shape-back {
     width: 240%;
@@ -1355,7 +1406,7 @@ nav .menu a:hover {
     position: absolute;
     width: 568px;
     height: 349px;
-    background: url("../../assets/projects/ux-side.png") no-repeat;
+    background: url("../../assets/projects/ux-side-hd.png") no-repeat;
     background-size: contain;
     left: -400px;
   }
@@ -1370,9 +1421,9 @@ nav .menu a:hover {
     margin-left: 0;
   }
   .shape-line img {
-    max-width: 800px;
+    max-width: 1078px;
     width: 200%;
-    margin-left: -250px;
+    margin-right: 95px;
   }
 
   .shape-circle-right img {
@@ -1396,7 +1447,7 @@ nav .menu a:hover {
     position: absolute;
     width: 402px;
     height: 370px;
-    background: url("../../assets/projects/brand-side.png") no-repeat;
+    background: url("../../assets/projects/brand-side-hd.png") no-repeat;
     background-size: contain;
     left: -300px;
   }
@@ -1549,12 +1600,7 @@ article .article-intro {
 .article-list {
   clear: both;
 }
-.article-list h3 {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-  font-family: "Karla", sans-serif;
-}
-.article-list h3 a {
+.article-list h4 a {
   text-decoration: none;
   color: inherit;
 }
@@ -1668,6 +1714,8 @@ footer {
   position: relative;
   padding-top: 32px;
   box-sizing: border-box;
+  width: 100%;
+  margin-left: -50%;
 }
 .footer-wrapper:before {
   content: "";

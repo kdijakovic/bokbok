@@ -13,8 +13,8 @@ html {
 body {
     background-color: $color-white;
     font-family: $sans-font-family;
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
     font-weight: $weight-regular;
     color: $color-tertiary-5;
 }
@@ -72,6 +72,7 @@ section {
 .title {
     @extend h2;
     color: $color-white;
+    font-weight: $weight-black;
     text-transform: none;
     letter-spacing: normal;
     margin-bottom: 8px;
@@ -186,6 +187,7 @@ section {
 @media only screen and (min-width: $query-hd) {
     body {
         font-size: 1.6rem;
+        line-height: 2.8rem;
     }
 
     .container {

@@ -67,6 +67,7 @@ header {
     h1 {
         color: $color-white;
         text-transform: lowercase;
+        font-weight: $weight-black;
 
         span:before {
             content: '\A';
@@ -91,6 +92,7 @@ header {
     background: url("../../assets/media/menu.svg") no-repeat;
     @include prefix('user-select', none);
     background-size: auto;
+    cursor: pointer;
     display: block;
     width: 40px;
     height: 40px;
@@ -164,6 +166,7 @@ nav {
         span {
             display: block;
             color: #FFF;
+            font-weight: $weight-black;
             text-transform: none;
             letter-spacing: normal;
             margin-bottom: 8px;
@@ -455,7 +458,7 @@ nav {
                 width: 1315px;
                 height: 1007px;
                 top: -244px;
-                left: -110px;
+                left: -180px;
             }
         }
 
@@ -465,11 +468,12 @@ nav {
 
         .header-top-wrapper {
             &:before {
-                left: 600px;
+                max-width: 1160px;
+                left: 645px;
                 right: auto;
                 bottom: -170px;
                 height: 40vw;
-                width: 60vw;
+                width: 55vw;
             }
         }
 
