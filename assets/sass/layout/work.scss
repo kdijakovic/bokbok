@@ -149,7 +149,7 @@
 .shape-circle-right {
     .work-screen {
         padding: 60px 0 10px;
-        margin: -20px 0 -10px;
+        margin: -70px 0 -10px;
     }
 
     img {
@@ -283,9 +283,19 @@
         @include grid(7, $grid-gap, 0);
     }
 
+    .work-info {
+        margin-right: calc(((100% - 440px) / 12) * 1 + 40px);
+        width: 40%;
+    }
+
+    .work-right .work-info {
+        @include grid-margin(margin-left, 1);
+        width: 40%;
+    }
+
     .shape-circle-left {
         img {
-            max-width: 666px;
+            max-width: 700px;
         }
     }
 }

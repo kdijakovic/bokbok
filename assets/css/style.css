@@ -2,7 +2,6 @@
 /**
  * Reset
  */
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:700,900");
 html, body, div, span, applet, object, iframe,
 h1, h2, article h3, .title, .logo, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -424,8 +423,7 @@ section p.intro {
  */
 @media only screen and (min-width: 700px) {
   .more p {
-    width: calc(((100% - 440px) / 12) * 8 + 280px);
-    margin-right: 40px;
+    width: 75%;
   }
 }
 /**
@@ -440,10 +438,12 @@ section p.intro {
   section {
     padding: 120px 0 36px;
   }
-  section p.intro {
-    width: calc(((100% - 440px) / 12) * 8 + 280px);
-    margin: 0;
-    margin-left: calc(((100% - 440px) / 12) * 1 + 40px);
+  section .intro {
+    width: calc(((100% - 440px) / 12) * 10 + 360px);
+    margin: 0 auto;
+  }
+  section .intro p {
+    width: 75%;
   }
 
   .more {
@@ -836,6 +836,30 @@ nav .menu a:hover {
   }
 }
 /**
+ * Strictly desktop
+ */
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  nav.fixed .nav-inner {
+    padding: 20px 24px;
+  }
+  nav.fixed .logo {
+    width: 24px;
+    height: 24px;
+  }
+  nav.fixed .menu {
+    margin: 0;
+  }
+  nav.fixed .menu a {
+    display: inline-block;
+  }
+  nav.fixed .social {
+    margin: 0;
+  }
+  nav.fixed .social a {
+    font-size: 1.6rem;
+  }
+}
+/**
  * HD
  */
 @media only screen and (min-width: 1600px) {
@@ -1223,7 +1247,7 @@ nav .menu a:hover {
 
 .shape-circle-right .work-screen {
   padding: 60px 0 10px;
-  margin: -20px 0 -10px;
+  margin: -70px 0 -10px;
 }
 .shape-circle-right img {
   width: 110%;
@@ -1335,8 +1359,18 @@ nav .menu a:hover {
     width: calc(((100% - 440px) / 12) * 7 + 240px);
   }
 
+  .work-info {
+    margin-right: calc(((100% - 440px) / 12) * 1 + 40px);
+    width: 40%;
+  }
+
+  .work-right .work-info {
+    margin-left: calc(((100% - 440px) / 12) * 1 + 40px);
+    width: 40%;
+  }
+
   .shape-circle-left img {
-    max-width: 666px;
+    max-width: 700px;
   }
 }
 /**
@@ -1459,8 +1493,6 @@ blockquote {
   margin-bottom: 24px;
 }
 blockquote .quote {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
   position: relative;
   padding: 0 56px;
   margin: 40px 0;
@@ -1517,7 +1549,7 @@ blockquote h3 {
   }
   blockquote .quote {
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 3.2rem;
     padding: 0 106px;
     margin: 104px 0 48px;
   }
@@ -1543,7 +1575,7 @@ blockquote h3 {
   }
   blockquote .quote {
     font-size: 2.4rem;
-    line-height: 3.2rem;
+    line-height: 4.4rem;
     padding: 0 112px;
   }
   blockquote .quote:before, blockquote .quote:after {
@@ -1603,6 +1635,9 @@ article .article-intro {
 .article-list h4 a {
   text-decoration: none;
   color: inherit;
+}
+.article-list h4 a:hover {
+  color: #979797;
 }
 .article-list li:not(:first-child):before {
   content: "";

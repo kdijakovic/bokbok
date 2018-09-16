@@ -447,6 +447,40 @@ nav {
 }
 
 /**
+ * Strictly desktop
+ */
+@media only screen and (min-width: $query-desktop) and (max-width: $query-hd - 1) {
+    nav {
+        &.fixed {
+            .nav-inner {
+                padding: 20px 24px;
+            }
+
+            .logo {
+                width: 24px;
+                height: 24px;
+            }
+
+            .menu {
+                margin: 0;
+
+                a {
+                    display: inline-block;
+                }
+            }
+
+            .social {
+                margin: 0;
+
+                a {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+/**
  * HD
  */
 @media only screen and (min-width: $query-hd) {
@@ -486,7 +520,6 @@ nav {
         padding: 0 32px;
 
         .nav-inner {
-            //@include grid(12, $grid-gap, 0);
             width: calc(100% - 56px);
             padding: 64px 0;
         }

@@ -42,18 +42,14 @@ article {
     clear: both;
 
     h4 {
-        //font-size: 1.1rem;
-        //line-height: 1.6rem;
-        //font-family: $sans-font-family;
-
         a {
             text-decoration: none;
             color: inherit;
-        }
-    }
 
-    .article-intro {
-        //@extend .text-small;
+            &:hover {
+                color: $color-tertiary-3;
+            }
+        }
     }
 
     li:not(:first-child):before {

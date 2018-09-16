@@ -151,7 +151,7 @@ section {
 @media only screen and (min-width: $query-tablet) {
     .more {
         p {
-            @include grid(8, $grid-gap);
+            width: 75%;
         }
     }
 }
@@ -168,10 +168,13 @@ section {
     section {
         padding: 120px 0 36px;
 
-        p.intro {
-            @include grid(8, $grid-gap, 0);
-            margin: 0;
-            @include grid-margin(margin-left, 1);
+        .intro {
+            @include grid(10, $grid-gap, 0);
+            margin: 0 auto;
+
+            p {
+                width: 75%;
+            }
         }
     }
 
