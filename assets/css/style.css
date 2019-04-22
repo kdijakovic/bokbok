@@ -1625,6 +1625,11 @@ article h3 a:hover {
 }
 article .article-intro {
   margin: 16px 0;
+  overflow: hidden;
+  height: 7.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .article-list {
@@ -1661,6 +1666,11 @@ article .article-intro {
   .article-list li:not(:first-child):before {
     width: 25%;
   }
+
+  article .article-intro {
+    -webkit-line-clamp: unset;
+    height: auto;
+  }
 }
 /**
  * Desktop
@@ -1676,7 +1686,6 @@ article .article-intro {
 
   .article-wrapper {
     display: flex;
-    align-items: center;
     margin: 50px 0;
   }
 
